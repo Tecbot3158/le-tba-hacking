@@ -1,0 +1,13 @@
+  {
+    "city": "Monterrey",
+    "country": "Mexico",
+    "district": null,
+    "end_date": "2019-03-09",
+    "event_code": "mxmo",
+    "event_type": 0,
+    "key": "2019mxmo",
+    "name": "Regional Monterrey",
+    "start_date": "2019-03-06",
+    "state_prov": "N.L.",
+    "year": 2019
+  }

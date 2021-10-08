@@ -1,0 +1,389 @@
+[
+  {
+    "city": "Toluca", 
+    "country": "Mexico", 
+    "key": "frc3158", 
+    "name": "Prepa Tec Toluca/General Motors Mexico/SolidWorks&Prepa Tec Toluca", 
+    "nickname": "PrepaTec - TECBOT", 
+    "state_prov": "Mexico", 
+    "team_number": 3158
+  }, 
+  {
+    "city": "San Luis Potos\u00ed", 
+    "country": "Mexico", 
+    "key": "frc3478", 
+    "name": "PrepaTec San Luis Potos\u00ed/General Motors/BOSCH/EKK Eagle/Fundaci\u00f3n Azteca de Grupo Salinas/BRIKO Robotics&Tecnol\u00f3gico de Monterrey Campus San Luis", 
+    "nickname": "PrepaTec - LamBot", 
+    "state_prov": "San Luis Potos\u00ed", 
+    "team_number": 3478
+  }, 
+  {
+    "city": "Le\u00f3n", 
+    "country": "Mexico", 
+    "key": "frc3480", 
+    "name": "Prepa Tec Le\u00f3n/General Motors&INSTITUTO TECNOLOGICO Y DE ESTUDIOS SUPERIORES DE MONTERREY CAMPUS LEON", 
+    "nickname": "PrepaTec - ABTOMAT", 
+    "state_prov": "Guanajuato", 
+    "team_number": 3480
+  }, 
+  {
+    "city": "Celaya", 
+    "country": "Mexico", 
+    "key": "frc3510", 
+    "name": "Prepa Tec Celaya&INSTITUTO TECNOLOGICO Y DE ESTUDIOS SUPERIORES DE MONTERREY", 
+    "nickname": "PrepaTec - Tectronic", 
+    "state_prov": "Guanajuato", 
+    "team_number": 3510
+  }, 
+  {
+    "city": "Saltillo", 
+    "country": "Mexico", 
+    "key": "frc3526", 
+    "name": "PrepaTec Saltillo/General Motors&PrepaTec Saltillo", 
+    "nickname": "PrepaTec - Blue Ignition", 
+    "state_prov": "Coahuila", 
+    "team_number": 3526
+  }, 
+  {
+    "city": "Mexico", 
+    "country": "Mexico", 
+    "key": "frc3933", 
+    "name": "PrepaTec Santa Fe/Fundaci\u00f3n Azteca/General Motors Mexico/Escato/Ibarra abogados&Tecnol\u00f3gico de Monterrey Campus Santa Fe", 
+    "nickname": "PrepaTec - Taman Keet", 
+    "state_prov": "Distrito Federal", 
+    "team_number": 3933
+  }, 
+  {
+    "city": "Tlalpan", 
+    "country": "Mexico", 
+    "key": "frc4010", 
+    "name": "PrepaTec CCM/Motorola Solutions Foundation/National Instruments/Fundaci\u00f3n Azteca/Qualcomm&Tecnologico de Monterrey, Campus Ciudad de Mexico", 
+    "nickname": "PrepaTec - Nautilus", 
+    "state_prov": "Distrito Federal", 
+    "team_number": 4010
+  }, 
+  {
+    "city": "Gomez Palacio", 
+    "country": "Mexico", 
+    "key": "frc4355", 
+    "name": "PE\u00d1OLES & CBTIS 159", 
+    "nickname": "Pe\u00f1oles-CP-BOTS", 
+    "state_prov": "Durango", 
+    "team_number": 4355
+  }, 
+  {
+    "city": "TORREON", 
+    "country": "Mexico", 
+    "key": "frc4400", 
+    "name": "PE\u00d1OLES&COLEGIO CERVANTES DE TORREON", 
+    "nickname": "CERBOTICS", 
+    "state_prov": "Coahuila", 
+    "team_number": 4400
+  }, 
+  {
+    "city": "Torreon", 
+    "country": "Mexico", 
+    "key": "frc4403", 
+    "name": "PE\u00d1OLES&PrepaTec Laguna", 
+    "nickname": "PrepaTec - PE\u00d1OLES - ROULT", 
+    "state_prov": "Coahuila", 
+    "team_number": 4403
+  }, 
+  {
+    "city": "Mexicali", 
+    "country": "Mexico", 
+    "key": "frc4584", 
+    "name": "CETYS Universidad/Intuitive Surgical, S. de R.L de C.V./Robert Bosch Tool de Mexico, S.A. de C.V./Honeywell's Mexicali Research & Technology Center&INSTITUTO EDUCATIVO DEL NOROESTE A.C.", 
+    "nickname": "SentinelFox Engineering", 
+    "state_prov": "Baja California", 
+    "team_number": 4584
+  }, 
+  {
+    "city": "Monterrey", 
+    "country": "Mexico", 
+    "key": "frc4635", 
+    "name": "PrepaTec, Eugenio Garza Sada/General Motors/T-REX/Milwaukee/Risoul/Grupo Surman/Qualcomm /POISE&PrepaTec Eugenio Garza Sada", 
+    "nickname": "PrepaTec - Botbusters", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 4635
+  }, 
+  {
+    "city": "Torreon", 
+    "country": "Mexico", 
+    "key": "frc4735", 
+    "name": "PE\u00d1OLES/Universidad Tecmilenio&Universidad Tecmilenio Campus Laguna", 
+    "nickname": "Tecmilenio - Pe\u00f1oles - DEROF - 4735", 
+    "state_prov": "Coahuila", 
+    "team_number": 4735
+  }, 
+  {
+    "city": "Mexico City", 
+    "country": "Mexico", 
+    "key": "frc4775", 
+    "name": "GRUPO SALINAS/FUNDACION AZTECA/ITALIKA/Susalia/Elektra&PLANTEL AZTECA", 
+    "nickname": "Aztech Robotics", 
+    "state_prov": "Mexico", 
+    "team_number": 4775
+  }, 
+  {
+    "city": "Hermosillo", 
+    "country": "Mexico", 
+    "key": "frc4782", 
+    "name": "PrepaTec Sonora Norte&Tec de Monterrey Campus Sonora Norte", 
+    "nickname": "PrepaTec - Borrebots", 
+    "state_prov": "Sonora", 
+    "team_number": 4782
+  }, 
+  {
+    "city": "Aguascalientes", 
+    "country": "Mexico", 
+    "key": "frc5133", 
+    "name": "PrepaTec Aguascalientes&ITESM", 
+    "nickname": "PrepaTec - Blue Steel", 
+    "state_prov": "Aguascalientes", 
+    "team_number": 5133
+  }, 
+  {
+    "city": "Torreon", 
+    "country": "Mexico", 
+    "key": "frc5312", 
+    "name": "PE\u00d1OLES &Escuela Carlos Pereyra", 
+    "nickname": "Pe\u00f1oles - Lobotics", 
+    "state_prov": "Coahuila", 
+    "team_number": 5312
+  }, 
+  {
+    "city": "Nuevo Laredo", 
+    "country": "Mexico", 
+    "key": "frc5874", 
+    "name": "Tecmilenio Nuevo Laredo & Tecmilenio Nuevo Laredo", 
+    "nickname": "Tecmilenio Border Bots", 
+    "state_prov": "Tamaulipas", 
+    "team_number": 5874
+  }, 
+  {
+    "city": "Xochitepec", 
+    "country": "Mexico", 
+    "key": "frc5948", 
+    "name": "Prepa Tec Cuernavaca/Bridgestone/W\u00fcrth/Baxter&Instituto Tecnol\u00f3gico y de estudios superiores de Monterrey", 
+    "nickname": "PrepaTec-Lebotics", 
+    "state_prov": "Morelos", 
+    "team_number": 5948
+  }, 
+  {
+    "city": "Tampico", 
+    "country": "Mexico", 
+    "key": "frc5959", 
+    "name": "PrepaTec Tampico&PrepaTec Tampico", 
+    "nickname": "PrepaTec - Titanium Rams", 
+    "state_prov": "Tamaulipas", 
+    "team_number": 5959
+  }, 
+  {
+    "city": "MAZATLAN", 
+    "country": "Mexico", 
+    "key": "frc6010", 
+    "name": "Universidad Tecmilenio Campus Mazatl\u00e1n", 
+    "nickname": "Tecmilenio - Teravolts - 6010", 
+    "state_prov": "Sinaloa", 
+    "team_number": 6010
+  }, 
+  {
+    "city": "Santa Catarina / Tuxtla Gutierrez, Chiapas", 
+    "country": "Mexico", 
+    "key": "frc6017", 
+    "name": "PrepaTec Santa Catarina/Kinetica/Grupo Expomex/Milwaukee Tools Mexico&Tecnologico de Monterrey, PrepaTec Santa Catarina", 
+    "nickname": "PrepaTec - Cyberius", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 6017
+  }, 
+  {
+    "city": "Irapuato", 
+    "country": "Mexico", 
+    "key": "frc6106", 
+    "name": "PrepaTec Irapuato/General Motors Mexico&Tecnologico de Monterrey Campus  Irapuato", 
+    "nickname": " PrepaTec - TecGear ", 
+    "state_prov": "Guanajuato", 
+    "team_number": 6106
+  }, 
+  {
+    "city": "Ciudad Obregon", 
+    "country": "Mexico", 
+    "key": "frc6156", 
+    "name": "PrepaTec Obregon&ITESM Campus Obreg\u00f3n", 
+    "nickname": "PrepaTec - Infinity Robotics Team", 
+    "state_prov": "Sonora", 
+    "team_number": 6156
+  }, 
+  {
+    "city": "San Luis Potos\u00ed", 
+    "country": "Mexico", 
+    "key": "frc6170", 
+    "name": "Robert Bosch San Luis Potos\u00ed/General Motors/Tecmilenio San Luis Potos\u00ed&Universidad TecMilenio", 
+    "nickname": "Tecmilenio Vitronik", 
+    "state_prov": "San Luis Potos\u00ed", 
+    "team_number": 6170
+  }, 
+  {
+    "city": "Ju\u00e1rez", 
+    "country": "Mexico", 
+    "key": "frc6200", 
+    "name": "ETHICON  Johnson and Johnson/PROD DESIGN & ANALYSIS &ITESM", 
+    "nickname": "PrepaTec - XRAMS", 
+    "state_prov": "Chihuahua", 
+    "team_number": 6200
+  }, 
+  {
+    "city": "Hermosillo", 
+    "country": "Mexico", 
+    "key": "frc6218", 
+    "name": "Universidad Tecmilenio&Preparatoria Tecmilenio", 
+    "nickname": "Tecmilenio - TAURUS - 6218 ", 
+    "state_prov": "Sonora", 
+    "team_number": 6218
+  }, 
+  {
+    "city": "AHOME", 
+    "country": "Mexico", 
+    "key": "frc6319", 
+    "name": "ARGOSY FOUNDATION/BOEING&TECMILENIO CAMPUS LOS MOCHIS", 
+    "nickname": "Tecmilenio ENKI-NOVA 6319", 
+    "state_prov": "Sinaloa", 
+    "team_number": 6319
+  }, 
+  {
+    "city": "COLIMA", 
+    "country": "Mexico", 
+    "key": "frc6348", 
+    "name": "PrepaTec/LA MARINA/MICHEL'S MELONS&PrepaTec Colima", 
+    "nickname": "PrepaTec - HORUS", 
+    "state_prov": "Colima", 
+    "team_number": 6348
+  }, 
+  {
+    "city": "Chihuahua", 
+    "country": "Mexico", 
+    "key": "frc6444", 
+    "name": "PrepaTec&Instituto Tecnol\u00f3gico y de Estudios Superiores de Monterrey Campus Chihuahua", 
+    "nickname": "PrepaTec Chihuahua- Sigma Robotics", 
+    "state_prov": "Chihuahua", 
+    "team_number": 6444
+  }, 
+  {
+    "city": "MONTERREY", 
+    "country": "Mexico", 
+    "key": "frc6647", 
+    "name": "PrepaTec/General Motors GM/briko robotics/4dot0 - Educaci\u00f3n 4.0/NEXON/I - CTEC Instituto de Ciencias y Tecnolog\u00edas Aplicadas&PrepaTec Eugenio Garza Lag\u00fcera", 
+    "nickname": "PrepaTec - VOLTEC Robotics", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 6647
+  }, 
+  {
+    "city": "Monterrey", 
+    "country": "Mexico", 
+    "key": "frc6652", 
+    "name": "Softtek/Grainger S.A. de C.V./SATI/Carto Monterrey S.A. de C.V./Atlas Management S.A. de C.V./Jetro Systemic S.A. de C.V.&Universidad Autonoma de Nuevo Le\u00f3n&Facultad de Ingenier\u00eda Mec\u00e1nica y El\u00e9ctrica", 
+    "nickname": "Tigres", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 6652
+  }, 
+  {
+    "city": "Guadalupe", 
+    "country": "Mexico", 
+    "key": "frc6666", 
+    "name": "Fundaci\u00f3n Azteca/The Boeing Company/Argosy Foundation/SolidWorks&Universidad Tecmilenio Campus Guadalupe", 
+    "nickname": "Tecmilenio NORTHERN HAWKS", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 6666
+  }, 
+  {
+    "city": "Obreg\u00f3n", 
+    "country": "Mexico", 
+    "key": "frc6676", 
+    "name": "Tecmilenio - Cd. Obreg\u00f3n/Argosy Fundation&Universidad Tecmilenio Camp\u00fas Cd. Obreg\u00f3n", 
+    "nickname": "Tecmilenio - Thunder Hawks - 6676", 
+    "state_prov": "Sonora", 
+    "team_number": 6676
+  }, 
+  {
+    "city": "Mexicali", 
+    "country": "Mexico", 
+    "key": "frc6694", 
+    "name": "&Preparatoria y Universidad 16 de Septiembre&Centro de Bachillerato Tecnol\u00f3gico Industrial y de Servicios #21 ( CBTIS 21)", 
+    "nickname": "INNOBOTICS", 
+    "state_prov": "Baja California", 
+    "team_number": 6694
+  }, 
+  {
+    "city": "Tlajomulco de Zu\u00f1iga", 
+    "country": "Mexico", 
+    "key": "frc6702", 
+    "name": "Tecnol\u00f3gico de Monterrey&ITESM, Prepa Tec Santa Anita", 
+    "nickname": "PrepaTec - StingBots", 
+    "state_prov": "Jalisco", 
+    "team_number": 6702
+  }, 
+  {
+    "city": "Heroica Caborca", 
+    "country": "Mexico", 
+    "key": "frc6896", 
+    "name": "Fresnillo PLC/Colegio de Educaci\u00f3n Profesional T\u00e9cnica del Estado de Sonora/Colegio de Bachilleres del Estado de Sonora Plantel Caborca/Colegio de Bachilleres del Estado de Sonora Plantel \"Faustino Felix Serna\"/Heroico Ayuntamiento de Caborca   &Family/Community", 
+    "nickname": "CABOTS", 
+    "state_prov": "Sonora", 
+    "team_number": 6896
+  }, 
+  {
+    "city": "Zapopan", 
+    "country": "Mexico", 
+    "key": "frc7102", 
+    "name": "Prepa Tec Guadalajara  & PrepaTec Guadalajara", 
+    "nickname": "PrepaTec - Daedalus", 
+    "state_prov": "Jalisco", 
+    "team_number": 7102
+  }, 
+  {
+    "city": "Santa Catarina", 
+    "country": "Mexico", 
+    "key": "frc7299", 
+    "name": "Softtek&American School Foundation of Monterrey", 
+    "nickname": "Robotic Eagles", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 7299
+  }, 
+  {
+    "city": "Monterrey", 
+    "country": "Mexico", 
+    "key": "frc7421", 
+    "name": "PrepaTec Cumbres", 
+    "nickname": "PrepaTec - OVERTURE", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 7421
+  }, 
+  {
+    "city": "Zacatecas", 
+    "country": "Mexico", 
+    "key": "frc7546", 
+    "name": "Prepa Tec Zacatecas", 
+    "nickname": "Prepa Tec - MinerZ", 
+    "state_prov": "Zacatecas", 
+    "team_number": 7546
+  }, 
+  {
+    "city": "Monterrey", 
+    "country": "Mexico", 
+    "key": "frc7725", 
+    "name": "Prepa Tec Valle Alto&Prepa Tec Valle Alto", 
+    "nickname": "PrepaTec - NUTS & VOLTS", 
+    "state_prov": "Nuevo Le\u00f3n", 
+    "team_number": 7725
+  }, 
+  {
+    "city": "Pachuca", 
+    "country": "Mexico", 
+    "key": "frc7740", 
+    "name": "Instituto Polit\u00e9cnico Nacional/Fundaci\u00f3n Azteca de Grupo Salinas&Unidad Profesional Multidisciplinaria Miguel Hidalgo y Costilla", 
+    "nickname": "Iron Donkeys", 
+    "state_prov": "Hidalgo", 
+    "team_number": 7740
+  }
+]
