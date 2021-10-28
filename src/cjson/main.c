@@ -4,11 +4,14 @@
 
 int main(){
 
+		cJSON * events_array = NULL;
 	cJSON * events_mx = cJSON_CreateObject();
 
 	if (events_mx == NULL){
 		fprintf(stderr, "error generating events_mx cJSON object");
 	}
+
+	cJSON * events_mx_events = cJSON_AddArrayToObject( events_mx, "events");
 
 	cJSON * events = NULL;
 	cJSON * city = NULL;
@@ -41,20 +44,40 @@ int main(){
 // 		if (cJSON_IsString(city) )
 // 			printf("city is %s\n", city->valuestring);
 
+		
+
 		country = cJSON_GetObjectItemCaseSensitive(events, "country");	
 		if (cJSON_IsString(country) ) {
 			// printf("country is %s\n", country->valuestring);
+			//
+			// if an event from "Mexico" is found, add the whole event to the new array
 			if (strcmp( country -> valuestring, \
 					"Mexico") == 0 ) {
 				name_event = cJSON_GetObjectItemCaseSensitive(events, "name");	
 				printf("Found event in Mexico.\t%s\n", name_event -> valuestring );
+				//     resolutions = cJSON_AddArrayToObject(monitor, "resolutions");
+				// even
+				// object cJSON= events_mx 
+				// cJSON_AddItemToArray(events_array, events)
+				// cJSON_AddObjectToObject(events_array, events);
+				cJSON_AddArrayToObject(events_array, events);
 
+
+					
+
+			
 			}
 		}
 	}
+
+
+	char * stringed = cJSON_Print(events_mx);
+	printf("new is... %s", stringed);
+
 	return(0);
 
 
+	fclose(file_json);
 
 }
 
