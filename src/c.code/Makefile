@@ -1,5 +1,5 @@
 main: 	
-	cc main.c
+	cc -ljson-c main.c
 
 run:
 	./a.out

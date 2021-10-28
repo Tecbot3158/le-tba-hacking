@@ -2,7 +2,7 @@
 
 TBA_URL="https://www.thebluealliance.com/api/v3"
 
-TBA_AUTH_KEY=`cat ~/tba-key`
+TBA_AUTH_KEY=`pass show T/X-TBA-Auth-Key`
 # replace this line with:
 # TBA_AUTH_KEY="yourpassword"
 

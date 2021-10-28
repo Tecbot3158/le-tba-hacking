@@ -1,2 +1,10 @@
+FILENAME=curl.test.c
 main:
-	cc -lcurl curl.test.c 
+	cc -lcurl $(FILENAME)
+# a.out
+# body.out
+# curl.test.c
+# head.out
+# Makefile
+# sepheaders.c
+# simple.c
