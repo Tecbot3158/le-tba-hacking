@@ -11,7 +11,7 @@ Most of the TBA data will be returned in JSON
 ## Relevant JSON schemas
 
 ### Event
-```{.json}
+```json
 {
 key*	string
 TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.
