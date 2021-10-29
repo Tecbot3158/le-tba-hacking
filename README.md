@@ -1,4 +1,4 @@
-# Le *The Blue Alliance* Hacking
+## Le *The Blue Alliance* Hacking
 
 just learning how to use the API.
 
@@ -13,8 +13,24 @@ Most of the TBA data will be returned in JSON
 
 ### Event
 ```json
+{
+  "city": "Ciudad de México",
+  "country": "Mexico",
+  "district": null,
+  "end_date": "2019-03-16",
+  "event_code": "mxcm",
+  "event_type": 0,
+  "key": "2019mxcm",
+  "name": "Regional de la Ciudad de Mexico",
+  "start_date": "2019-03-13",
+  "state_prov": "CDMX",
+  "year": 2019
 }
 ```
+the `key` object-string will be the one used when using the API from 
+The Blue Alliance. This will allow you to download all of the relevant
+data to that event/match, including score specifics, teams, winner team, 
+etc.
 
 
 ## projects:
