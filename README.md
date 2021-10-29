@@ -54,3 +54,63 @@ etc.
 # todo:
 - read https://ericknavarro.io/2020/10/01/27-Mi-primer-proyecto-utilizando-Yacc-y-Lex/
 - read https://duckduckgo.com/?q=TCL+%2F+QT&ia=web
+
+# tree
+```
+.
+├── data
+├── matches.event.2019mxmo.json
+├── README.md
+└── src
+    ├── a.out
+    ├── c.code
+    │   ├── a.out
+    │   ├── cJSON.c
+    │   ├── cJSON.h
+    │   ├── data
+    │   │   ├── humans.json
+    │   │   └── test.json
+    │   ├── main.c
+    │   ├── maing.c
+    │   ├── Makefile
+    │   ├── printjson
+    │   │   ├── a.out
+    │   │   ├── Makefile
+    │   │   └── read.c
+    │   └── test.json
+    ├── cjson
+    │   ├── cJSON.c
+    │   ├── cJSON.h
+    │   ├── filter.x
+    │   ├── idk.c
+    │   ├── main.c
+    │   ├── Makefile
+    │   ├── regs.mx.json.test.t
+    │   ├── test
+    │   │   ├── a.out
+    │   │   ├── json-new.c
+    │   │   ├── main.c
+    │   │   └── Makefile
+    │   ├── test2.json
+    │   └── test.json
+    ├── curl
+    │   ├── a.out
+    │   ├── body.out
+    │   ├── curl.test.c
+    │   ├── head.out
+    │   ├── Makefile
+    │   ├── sepheaders.c
+    │   └── simple.c
+    ├── get
+    │   └── country.year.events
+    │       ├── a.out
+    │       ├── main.c
+    │       └── Makefile
+    ├── get.event.amount.teams.sh
+    ├── get.event.monterrey.2019.teams
+    ├── monterrey
+    ├── tba.events.2019.simple
+    └── vars.sh
+
+10 directories, 43 files
+```
