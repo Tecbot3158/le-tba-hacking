@@ -4,6 +4,7 @@ just learning how to use the API.
 
 Here will be scripts to scrape it.
 
+This project attempts to adhere to [Semantic Versioning](https://semver.org/).
 
 # TBA API Explained
 Most of the TBA data will be returned in JSON
