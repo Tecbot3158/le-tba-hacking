@@ -5,8 +5,12 @@
 
 int main(){
 
-		cJSON * events_array = NULL;
+	// this object is not used any more
+	// cJSON * events_array = NULL;
 	cJSON * events_mx = cJSON_CreateObject();
+	// cJSON_AddArrayToObject();
+	// 
+	
 
 	if (events_mx == NULL){
 		fprintf(stderr, "error generating events_mx cJSON object");
@@ -17,7 +21,7 @@ int main(){
 	cJSON * events = NULL;
 	cJSON * city = NULL;
 
-	FILE * file_json = fopen("test2.json", "rb");
+	FILE * file_json = fopen("test.json", "rb");
 	char * buffer = NULL;
 	size_t len;
 	ssize_t bytes_read = getdelim(&buffer, &len, '\0', file_json);
@@ -71,6 +75,8 @@ int main(){
 				// cJSON_AddItemToArray(events_mx_events, events);
 				// if AddItemToArray is used, the  ArrayForEach stops working...
 				cJSON_AddItemReferenceToArray(events_mx_events, events);
+				// consider using: 
+				// cJSON_AddItemReferenceToObject( ) ;
 
 
 					
