@@ -10,8 +10,14 @@
 const char * tba_base_url = "https://www.thebluealliance.com/api/v3";
 const char * tba_base_header = "X-TBA-Auth-Key:";
 
+// function declarations
+// for local use only
+// ALL public Library functions are prepended with "TBA_"
 static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream);
+FILE * perform_get_tba (TBA_request * request) ;
 
+
+/*
 int main(){
 
 	TBA_request test = {
@@ -39,6 +45,8 @@ int main(){
 
 
 }
+*/
+
 
 cJSON * TBA_parse_json ( TBA_request * request ) {
 	cJSON * parsed_file;	
@@ -53,6 +61,8 @@ cJSON * TBA_parse_json ( TBA_request * request ) {
 		return NULL;
 	}
 
+	// printf("%s", buffer);
+
 	parsed_file = cJSON_Parse( 	buffer );
 	if ( parsed_file == NULL ){
 		fprintf ( stderr, "TBA_parse_json(). Error parsing to json structure.\n");
@@ -62,6 +72,26 @@ cJSON * TBA_parse_json ( TBA_request * request ) {
 	return parsed_file;
 
 	return NULL;
+}
+
+/*
+ * returns an integer with file size
+ */
+int TBA_perform_request( TBA_request * request ){
+	FILE * downloaded_file = perform_get_tba( request);
+	if ( downloaded_file == NULL ){
+		fprintf(stderr, "TBA_perform_request(). Error generating virtual file");
+	}
+	request->body_file = downloaded_file;	
+
+	int file_size = 0;
+
+	fseek(downloaded_file, 0L, SEEK_END);
+	file_size = ftell(downloaded_file);
+
+	rewind(downloaded_file);
+
+	return file_size;
 }
 
 FILE * perform_get_tba (TBA_request * request) {
@@ -148,6 +178,10 @@ FILE * perform_get_tba (TBA_request * request) {
 /*
  * The following function is part of the CURL Project examples, see 
  * below for the license, 
+ *
+ * This is a callback function used when 
+ * downloading from the internet with libcurl,
+ * it will write to an arbitrary file set in curl options
  *
  * COPYRIGHT AND PERMISSION NOTICE
 
