@@ -4,7 +4,7 @@ options:
 	@echo all 		compile and run
 
 main:
-	cc -lcurl tba_downloader.c -o downloader.x
+	cc -lcjson -lcurl tba_downloader.c -o downloader.x
 
 all: main run
 
