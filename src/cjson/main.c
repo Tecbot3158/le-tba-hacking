@@ -91,7 +91,51 @@ int main(){
 		}
 	}
 
+	cJSON * events_mx_array = cJSON_GetObjectItemCaseSensitive( events_mx, "events");
 
+	char * toprint = cJSON_Print(events_mx_array);
+	// printf("\n%s", toprint);
+
+	cJSON * single_event_mx = NULL;
+	cJSON_ArrayForEach( single_event_mx, events_mx_array) {
+		cJSON * event_all_matches = NULL;
+
+		//strcat... man 3 
+		cJSON * event_obj = cJSON_GetObjectItem( single_event_mx, "key");
+		if ( ! cJSON_IsString( event_obj )  )
+			fprintf(stderr, "Error parsing key value into string ");
+
+		TBA_request all_matches = {	.endpoint = malloc(500),  } ;
+
+		memset(all_matches.endpoint, 0, 500);
+
+		strncat( all_matches.endpoint, "event/" , 20 );
+
+		strncat( all_matches.endpoint, event_obj -> valuestring , 20 ) ;
+
+		strncat( all_matches.endpoint, "/matches" , 20 );
+
+		// printf("URL:%s\n", all_matches.endpoint );
+
+		int file_size = TBA_perform_request( &all_matches );
+		event_all_matches = TBA_parse_json( & all_matches );
+
+		// printf("size is %i\n", cJSON_GetArraySize( event_all_matches ) );
+		// printf("http response is %i\n", all_matches.http_response );
+
+		// printf("-----------------\n%s\n", cJSON_Print(event_all_matches) );
+		//
+		//
+		cJSON * event_matches = cJSON_AddArrayToObject(events_mx  , event_obj->valuestring);
+		// event_obj->valuestring 
+
+		cJSON_AddItemReferenceToArray(event_matches, event_all_matches);
+		cJSON_AddItemReferenceToArray(events_mx, event_matches);
+
+	}
+
+	// cJSON_AddI
+//	cJSON * events_mx_events = cJSON_AddArrayToObject( events_mx, "events");
 	char * stringed = cJSON_Print(events_mx);
 	printf("%s", cJSON_Print(events_mx) );
 

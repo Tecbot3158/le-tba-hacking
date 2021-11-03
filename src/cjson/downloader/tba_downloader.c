@@ -55,6 +55,8 @@ cJSON * TBA_parse_json ( TBA_request * request ) {
 	size_t len;
 	ssize_t bytes_read = getdelim(&buffer, &len, '\0', request->body_file);
 
+	//fprintf(stderr, "%s", buffer);
+
 	if ( bytes_read == -1 ){
 
 		fprintf(stderr, "TBA_parse_json(). Error converting http body file into string\n");
@@ -122,7 +124,7 @@ FILE * perform_get_tba (TBA_request * request) {
 		return NULL;
 	}
 
-	char target_url[300];
+	char target_url[500];
 
 	// if first character is a slash,
 	// skip it...
@@ -133,6 +135,8 @@ FILE * perform_get_tba (TBA_request * request) {
 	sprintf(target_url, "%s/%s", tba_base_url, request->endpoint);
 
 	//printf("Target url is %s\n", target_url);
+	//
+	// fprintf(stderr, "final url is:\t%s\n", target_url);
 
 	curl_easy_setopt( url_handle, CURLOPT_URL, target_url);
 	curl_easy_setopt( url_handle, CURLOPT_HTTPHEADER, headers_list);
