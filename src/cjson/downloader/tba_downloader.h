@@ -1,4 +1,5 @@
 #include <cjson/cJSON.h>
+#include <stdio.h>
 //header guard
 #ifndef TBA_DOWNLOADER_H
 #define TBA_DOWNLOADER_H
@@ -10,5 +11,6 @@ typedef struct {
 
 } TBA_request ;
 
+FILE * perform_get_tba (TBA_request * request) ;
 
 #endif
