@@ -1,6 +1,6 @@
 EXECUTABLE=filter.x
 main:
-	cc -lcjson main.c -o $(EXECUTABLE)
+	cc -lcurl -lcjson main.c downloader/tba_downloader.c -o $(EXECUTABLE)
 all: main run
 
 run:
