@@ -4,8 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <curl/curl.h>
-#include <time.h>
+#include "tba_downloader.h"
 
 const char * tba_base_url = "https://www.thebluealliance.com/api/v3";
 const char * tba_base_header = "X-TBA-Auth-Key:";
@@ -14,6 +13,9 @@ static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream);
 
 int main(){
 
+	TBA_request test = {
+		.endpoint = "status",
+	} ;
 
 	CURL *tba_url_handle;
 
@@ -50,7 +52,7 @@ int main(){
 
 	char target_url_c[150];
 	char * target_url = target_url_c;
-	sprintf(target_url, "%s/%s", tba_base_url, "status");
+	sprintf(target_url_c, "%s/%s", tba_base_url, "status");
 
 	//printf("Target url is %s\n", target_url);
 
@@ -65,6 +67,7 @@ int main(){
 
 
 	curl_easy_perform( tba_url_handle );
+	// curl_easy_clean( )
 
 	char s[1000];
 
@@ -77,15 +80,22 @@ int main(){
 	printf("--------------\n");
 	printf("lullz header\n");
 
-	while ( fgets(s, sizeof s, header_file) != NULL ){
-		printf("%s", s);
-	}
+	// while ( fgets(s, sizeof s, header_file) != NULL ){
+	// 	printf("%s", s);
+	// }
+
+	char response[1000];
+
+	fscanf(header_file, "HTTP/2 %s", response);
+	//fgets(response, sizeof response, header_file);
+
+	printf("HTTP response code is %s\n", response);
 
 		exit(0);
 
 
-//	fclose(	data_file);
-//	fclose( header_file);
+	fclose(	data_file);
+	fclose( header_file);
 
 
 
@@ -94,6 +104,79 @@ int main(){
 
 
 }
+
+
+FILE * perform_get_tba (TBA_request * request) {
+
+
+	CURL *url_handle;
+
+	curl_global_init(CURL_GLOBAL_ALL);
+	url_handle = curl_easy_init();
+
+
+
+	char ** bufloc = NULL;
+	size_t data_size = 0;
+	FILE * data_file = open_memstream(bufloc, & data_size );
+	size_t header_size = 0;
+	FILE * header_file = open_memstream(bufloc, & header_size );
+
+	char * tba_key = getenv("TBA_AUTH_KEY");
+	char header_auth[300];
+	sprintf(header_auth, "%s %s", tba_base_header, tba_key);
+
+	struct curl_slist * headers_list=NULL;
+	headers_list=curl_slist_append( headers_list, header_auth);
+
+	if(headers_list == NULL){
+		fprintf(stderr, "Error! headers_list not initiallized correctly!\n");
+		return NULL;
+	}
+
+	char target_url[300];
+
+	// if first character is a slash,
+	// skip it...
+	// or else the api will deny it 
+	if(request->endpoint[0] == '/')
+		request->endpoint++;
+
+	sprintf(target_url, "%s/%s", tba_base_url, request->endpoint);
+
+	//printf("Target url is %s\n", target_url);
+
+	curl_easy_setopt( url_handle, CURLOPT_URL, target_url);
+	curl_easy_setopt( url_handle, CURLOPT_HTTPHEADER, headers_list);
+
+	curl_easy_setopt( url_handle, CURLOPT_WRITEFUNCTION, write_data);
+
+	curl_easy_setopt( url_handle, CURLOPT_HEADERDATA, header_file);
+	curl_easy_setopt( url_handle, CURLOPT_WRITEDATA, data_file);
+
+	curl_easy_perform( url_handle );
+
+	// while ( fgets(s, sizeof s, header_file) != NULL ){
+	// 	printf("%s", s);
+	// }
+
+	char response[100];
+
+	fscanf(header_file, "HTTP/2 %s", response);
+	//fgets(response, sizeof response, header_file);
+	//
+	request->http_response = atoi(response);
+
+	fclose(	data_file);
+	fclose( header_file);
+
+	curl_easy_cleanup( url_handle );
+
+	return data_file;
+
+	return NULL;
+}
+
 
 /*
  * The following function is part of the CURL Project examples, see 
