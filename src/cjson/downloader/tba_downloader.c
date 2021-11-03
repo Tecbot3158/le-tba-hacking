@@ -72,6 +72,15 @@ int main(){
 		printf("%s", s);
 	}
 
+	
+
+	printf("--------------\n");
+	printf("lullz header\n");
+
+	while ( fgets(s, sizeof s, header_file) != NULL ){
+		printf("%s", s);
+	}
+
 		exit(0);
 
 
