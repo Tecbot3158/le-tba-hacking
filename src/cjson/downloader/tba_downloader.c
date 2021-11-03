@@ -1,5 +1,6 @@
 #include <curl/curl.h>
 #include <curl/easy.h>
+#include <cjson/cJSON.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,20 +15,54 @@ static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream);
 int main(){
 
 	TBA_request test = {
-		.endpoint = "status",
+		.endpoint = "events/2019",
 	} ;
 
-	FILE * myfile = perform_get_tba( & test );
+	test.body_file = perform_get_tba( & test );
 
 	char line[100];	
 
-	while ( fgets( line, sizeof line, myfile) != NULL ) {
-		printf("%s", line);
-	}
+//	while ( fgets( line, sizeof line, test.body_file) != NULL ) {
+//		printf("%s", line);
+//	}
+	
+
+	
+	// printf("response: %i", test.http_response );
+
+	cJSON * myobj = TBA_parse_json( &test ) ;
+
+	char * gg = cJSON_Print( myobj );
+
+	printf("%s", gg);	
+	
 
 
 }
 
+cJSON * TBA_parse_json ( TBA_request * request ) {
+	cJSON * parsed_file;	
+
+	char * buffer = NULL;
+	size_t len;
+	ssize_t bytes_read = getdelim(&buffer, &len, '\0', request->body_file);
+
+	if ( bytes_read == -1 ){
+
+		fprintf(stderr, "TBA_parse_json(). Error converting http body file into string\n");
+		return NULL;
+	}
+
+	parsed_file = cJSON_Parse( 	buffer );
+	if ( parsed_file == NULL ){
+		fprintf ( stderr, "TBA_parse_json(). Error parsing to json structure.\n");
+		return NULL;
+	}
+
+	return parsed_file;
+
+	return NULL;
+}
 
 FILE * perform_get_tba (TBA_request * request) {
 
@@ -90,7 +125,7 @@ FILE * perform_get_tba (TBA_request * request) {
 	fscanf(header_file, "HTTP/2 %s", response);
 	//fgets(response, sizeof response, header_file);
 	//
-	printf("response is... %s\n", response);
+	// printf("response is... %s\n", response);
 	request->http_response = atoi(response);
 
  	curl_easy_cleanup( url_handle );
