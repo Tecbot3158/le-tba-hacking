@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <curl/curl.h>
+#include <curl/easy.h>
+
+#include "downloader/tba_downloader.h"
 
 int main(){
 
@@ -10,29 +14,30 @@ int main(){
 	cJSON * events_mx = cJSON_CreateObject();
 	// cJSON_AddArrayToObject();
 	// 
-	
 
 	if (events_mx == NULL){
-		fprintf(stderr, "error generating events_mx cJSON object");
+		fprintf(stderr, "error generating events_mx cJSON empty object");
 	}
-
 	cJSON * events_mx_events = cJSON_AddArrayToObject( events_mx, "events");
 
 	cJSON * events = NULL;
 	cJSON * city = NULL;
 
-	FILE * file_json = fopen("test.json", "rb");
-	char * buffer = NULL;
-	size_t len;
-	ssize_t bytes_read = getdelim(&buffer, &len, '\0', file_json);
-	if ( bytes_read == -1){
-		printf("Error!\n");
-		return( -1 );
-	}
-	// printf("file is...\n%s\t EOF \n", buffer);
-	// printf("length is %i\n", len);
+	TBA_request frc_events_2019 = {
+		.endpoint = "events/2019",
+	} ;
 
-	cJSON *json_parsed = cJSON_Parse(buffer);
+
+	int file_json_size = TBA_perform_request( &frc_events_2019 );
+
+	if (frc_events_2019.http_response != 200){
+		fprintf(stderr, "Error. http response is %i\n", frc_events_2019.http_response  );
+	}
+
+
+	// printf("file size is %i\n", file_json_size);
+	cJSON * json_parsed = TBA_parse_json( & frc_events_2019 );
+	// cJSON *json_parsed = cJSON_Parse(frc_events_2019->body_file);
 
 	int array_size = cJSON_GetArraySize(json_parsed);
 
@@ -93,7 +98,7 @@ int main(){
 	return(0);
 
 
-	fclose(file_json);
+	// fclose(file_json);
 
 }
 
