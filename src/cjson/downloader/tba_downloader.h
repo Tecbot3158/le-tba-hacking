@@ -14,5 +14,6 @@ typedef struct {
 
 FILE * perform_get_tba (TBA_request * request) ;
 cJSON * TBA_parse_json ( TBA_request * request );
+int TBA_perform_request( TBA_request * request ) ;
 
 #endif
